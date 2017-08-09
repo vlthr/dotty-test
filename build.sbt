@@ -5,7 +5,10 @@ scalaVersion in ThisBuild := "0.1.2-RC1"
 lazy val settings = Seq(
   name := "dotty-test",
   version := "0.0.1",
-  organization := "vlthr"
+  organization := "vlthr",
+  libraryDependencies ++= Seq(
+    ("com.chuusai" %% "shapeless" % "2.3.2").withDottyCompat
+  )
 )
 
 lazy val root = Project(id = "dotty-test", base = file("."), settings = settings)
