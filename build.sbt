@@ -4,10 +4,7 @@ scalaVersion in ThisBuild := dottyLatestNightlyBuild.get
 lazy val settings = Seq(
   name := "dotty-test",
   version := "0.0.1",
-  organization := "vlthr",
-  libraryDependencies ++= Seq(
-    ("com.chuusai" %% "shapeless" % "2.3.2").withDottyCompat
-  )
+  organization := "vlthr"
 )
 
 lazy val root =
