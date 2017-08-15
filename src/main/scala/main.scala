@@ -1,15 +1,10 @@
 trait HList
-case class HNil() extends HList
-trait FromTraversable[Out <: HList] extends Serializable {
-  def apply(l: Any): Option[Out]
-}
-object FromTraversable {
-  def apply[Out <: HList](implicit from: FromTraversable[Out]) = from
+trait HNil extends HList
 
+trait FromTraversable[Out <: HList]
+object FromTraversable {
   implicit def hnilFromTraversable[T]: FromTraversable[HNil] =
-    new FromTraversable[HNil] {
-      def apply(l: Any) = None
-    }
+    new FromTraversable[HNil]{}
 }
 
 object Filter {
