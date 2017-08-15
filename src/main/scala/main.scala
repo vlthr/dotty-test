@@ -1,6 +1,6 @@
 object Main {
   Map(
-    "a" -> A(),
-    "a" -> A()
+    "a" -> Unknown(),
+    "b" -> Unknown()
   )
 }

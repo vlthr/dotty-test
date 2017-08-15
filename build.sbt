@@ -1,6 +1,5 @@
-lazy val metaVersion = "1.6.0"
-// scalaVersion in ThisBuild := dottyLatestNightlyBuild.get
-scalaVersion in ThisBuild := "0.2.0-RC1"
+scalaVersion in ThisBuild := dottyLatestNightlyBuild.get
+// scalaVersion in ThisBuild := "0.2.0-RC1"
 
 lazy val settings = Seq(
   name := "dotty-test",
